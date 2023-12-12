@@ -48,7 +48,7 @@ public class DNDMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ORC_SWORD);
+            event.accept(ModItems.ORC_TOOTH_SWORD);
         }
     }
 

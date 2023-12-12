@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "dndmod:orc_tooth"
+    }
+  },
+  "pattern": [
+    " T ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "dndmod:orc_tooth_shovel"
+  },
+  "show_notification": true
+}

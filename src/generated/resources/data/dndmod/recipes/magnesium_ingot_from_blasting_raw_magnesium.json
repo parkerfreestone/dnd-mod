@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 75,
+  "experience": 0.13,
+  "group": "magnesium",
+  "ingredient": {
+    "item": "dndmod:raw_magnesium"
+  },
+  "result": "dndmod:magnesium_ingot"
+}
