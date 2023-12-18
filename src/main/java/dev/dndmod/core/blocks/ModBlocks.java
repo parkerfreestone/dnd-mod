@@ -1,6 +1,7 @@
 package dev.dndmod.core.blocks;
 
 import dev.dndmod.core.DNDMod;
+import dev.dndmod.core.blocks.custom.GeoRefinerBlock;
 import dev.dndmod.core.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -26,6 +27,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGMATITE_ORE = registerBlock("magmatite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+
+    public static final RegistryObject<Block> GEO_REFINER = registerBlock("geo_refiner",
+            ()-> new GeoRefinerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
