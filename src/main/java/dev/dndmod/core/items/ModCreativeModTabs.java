@@ -20,16 +20,18 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.dndmod"))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.ORC_TOOTH.get());
+
                         output.accept(ModItems.MAGNESIUM_INGOT.get());
                         output.accept(ModItems.RAW_MAGNESIUM.get());
-                        output.accept(ModItems.RAW_MAGMATITE.get());
-                        output.accept(ModItems.MAGMATITE_INGOT.get());
+                        output.accept(ModItems.UNCURED_MAGMATITE.get());
+                        output.accept(ModItems.CURED_MAGMATITE.get());
 
                         output.accept(ModItems.ORC_TOOTH_SWORD.get());
                         output.accept(ModItems.ORC_TOOTH_PICKAXE.get());
                         output.accept(ModItems.ORC_TOOTH_AXE.get());
                         output.accept(ModItems.ORC_TOOTH_SHOVEL.get());
                         output.accept(ModItems.ORC_TOOTH_HOE.get());
+                        output.accept(ModItems.ORC_TOOTH_SHIELD.get());
 
                         output.accept(ModItems.MAGMATITE_HELMET.get());
                         output.accept(ModItems.MAGMATITE_CHESTPLATE.get());
@@ -38,6 +40,7 @@ public class ModCreativeModTabs {
 
 
                         output.accept(ModBlocks.MAGNESIUM_ORE.get());
+                        output.accept(ModBlocks.MAGMATITE_ORE.get());
                     })
                     .build());
 

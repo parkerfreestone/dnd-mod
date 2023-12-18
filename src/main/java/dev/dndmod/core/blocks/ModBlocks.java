@@ -23,6 +23,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGNESIUM_ORE = registerBlock("magnesium_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> MAGMATITE_ORE = registerBlock("magmatite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

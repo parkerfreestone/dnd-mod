@@ -41,8 +41,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.MAGNESIUM_INGOT);
         simpleItem(ModItems.RAW_MAGNESIUM);
-        simpleItem(ModItems.MAGMATITE_INGOT);
-        simpleItem(ModItems.RAW_MAGMATITE);
+        simpleItem(ModItems.CURED_MAGMATITE);
+        simpleItem(ModItems.UNCURED_MAGMATITE);
 
         simpleItem(ModItems.ORC_TOOTH);
 

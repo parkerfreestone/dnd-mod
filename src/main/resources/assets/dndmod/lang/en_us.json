@@ -4,13 +4,14 @@
   "item.dndmod.orc_tooth_axe": "Orc Tooth Axe",
   "item.dndmod.orc_tooth_shovel": "Orc Tooth Shovel",
   "item.dndmod.orc_tooth_hoe": "Orc Tooth Hoe",
+  "item.dndmod.orc_tooth_shield": "Orc Tooth Shield",
 
   "item.dndmod.orc_tooth": "Orc Tooth",
 
   "item.dndmod.magnesium_ingot": "Magnesium Ingot",
   "item.dndmod.raw_magnesium": "Raw Magnesium",
-  "item.dndmod.magmatite_ingot": "Magmatite Ingot",
-  "item.dndmod.raw_magmatite": "Raw Magmatite",
+  "item.dndmod.cured_magmatite": "Cured Magmatite",
+  "item.dndmod.uncured_magmatite": "Un-Cured Magmatite",
 
   "item.dndmod.magmatite_helmet": "Magmatite Helmet",
   "item.dndmod.magmatite_chestplate": "Magmatite Chestplate",
@@ -18,6 +19,7 @@
   "item.dndmod.magmatite_boots": "Magmatite Boots",
 
   "block.dndmod.magnesium_ore": "Magnesium Ore",
+  "block.dndmod.magmatite_ore": "Magmatite Ore",
 
   "creativetab.dndmod": "DND Mod"
 }

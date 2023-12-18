@@ -1,4 +1,7 @@
-// 1.20.1	2023-12-12T01:51:23.5631696	Block States: dndmod
+// 1.20.1	2023-12-12T14:05:48.5570254	Block States: dndmod
+170e329ef462bf6c224b9cd099653a616fb3c6fc assets/dndmod/blockstates/magmatite_ore.json
 7b4f8e833d6f87875ea23bc015a2389abd3d1121 assets/dndmod/blockstates/magnesium_ore.json
+d53b770c71e72fb46c8a81a9daccea3a29dee205 assets/dndmod/models/block/magmatite_ore.json
 f1e6d94c8182c56c7a6ef6c55adca1bff6c2bf81 assets/dndmod/models/block/magnesium_ore.json
+210d5b63532ba29c0907e913913529b0c5407035 assets/dndmod/models/item/magmatite_ore.json
 c7477040c5e9779f5ab16fc51c09bcfa12383df0 assets/dndmod/models/item/magnesium_ore.json

@@ -1,3 +1,4 @@
-// 1.20.1	2023-12-12T01:51:23.5600983	Tags for minecraft:block mod id dndmod
-87d9b501795d61ad39dffbbc030beb8a5d34699b data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.20.1	2023-12-12T14:05:48.5540255	Tags for minecraft:block mod id dndmod
+f4a04838d13dc42bc8852aeebd9e27088cc16f68 data/minecraft/tags/blocks/mineable/pickaxe.json
+94af312b51a3f9d1613666663d55f93cb77d289c data/minecraft/tags/blocks/needs_iron_tool.json
 c9273f3b7993561190f10f67eaad93a7b2490086 data/minecraft/tags/blocks/needs_stone_tool.json

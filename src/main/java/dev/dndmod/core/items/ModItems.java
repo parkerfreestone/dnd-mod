@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DNDMod.MOD_ID);
 
+    // MISC ITEMS
     public static final RegistryObject<Item> ORC_TOOTH = ITEMS.register("orc_tooth",
             () -> new Item(new Item.Properties()));
 
@@ -19,10 +20,10 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_MAGNESIUM = ITEMS.register("raw_magnesium",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> RAW_MAGMATITE = ITEMS.register("raw_magmatite",
+    public static final RegistryObject<Item> UNCURED_MAGMATITE = ITEMS.register("uncured_magmatite",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> MAGMATITE_INGOT = ITEMS.register("magmatite_ingot",
+    public static final RegistryObject<Item> CURED_MAGMATITE = ITEMS.register("cured_magmatite",
             () -> new Item(new Item.Properties()));
 
     // ORC TOOTH TOOLS
@@ -36,6 +37,8 @@ public class ModItems {
             () -> new ShovelItem(ModToolTiers.ORC_TOOTH, 0, 0, new Item.Properties()));
     public static final RegistryObject<Item> ORC_TOOTH_HOE = ITEMS.register("orc_tooth_hoe",
             () -> new HoeItem(ModToolTiers.ORC_TOOTH, 0, 0, new Item.Properties()));
+    public static final RegistryObject<Item> ORC_TOOTH_SHIELD = ITEMS.register("orc_tooth_shield",
+            () -> new ShieldItem(new Item.Properties().stacksTo(1).durability(398)));
 
     // MAGMATITE ARMOR
     public static final RegistryObject<Item> MAGMATITE_HELMET = ITEMS.register("magmatite_helmet",

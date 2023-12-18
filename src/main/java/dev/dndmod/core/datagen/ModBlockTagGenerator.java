@@ -21,11 +21,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.MAGNESIUM_ORE.get());
+                .add(ModBlocks.MAGNESIUM_ORE.get(),
+                        ModBlocks.MAGMATITE_ORE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGNESIUM_ORE.get()).addTag(Tags.Blocks.ORES);
 
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.MAGMATITE_ORE.get()).addTag(Tags.Blocks.ORES);
 
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dndmod:item/raw_magmatite"
+    "layer0": "dndmod:item/uncured_magmatite"
   }
 }

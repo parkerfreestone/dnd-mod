@@ -1,4 +1,5 @@
-// 1.20.1	2023-12-12T03:06:20.8431092	Item Models: dndmod
+// 1.20.1	2023-12-18T05:15:11.8810034	Item Models: dndmod
+a3ed8c7045b4d7e6a1154da23a487bde3db41a0d assets/dndmod/models/item/cured_magmatite.json
 19e2a89a8bb4700a67b7fc8e01661558ec7c7498 assets/dndmod/models/item/magmatite_boots.json
 5e832a032a7ecdd4c8a439933dae90049aca5d37 assets/dndmod/models/item/magmatite_boots_amethyst_trim.json
 6d4a6c2359ee33e3c24fac268f1d8f0a974a0d45 assets/dndmod/models/item/magmatite_boots_copper_trim.json
@@ -32,7 +33,6 @@ d1be200db3308256eab148f7f70fa6eeeb81cb2b assets/dndmod/models/item/magmatite_hel
 e59588622e3e411dbf35a6a7fc0dd0a365797e61 assets/dndmod/models/item/magmatite_helmet_netherite_trim.json
 2686193f6c9d57446a6726ddc932e43b6242f063 assets/dndmod/models/item/magmatite_helmet_quartz_trim.json
 73d2a24c1b9e433b7298a7238d1fbca766b78b2f assets/dndmod/models/item/magmatite_helmet_redstone_trim.json
-6b15073d0be1d85e13bc8176fa1a27dfae362bde assets/dndmod/models/item/magmatite_ingot.json
 e0a13660b4e20a73d5fa67c5b565d9526ea98c54 assets/dndmod/models/item/magmatite_leggings.json
 02dec005f3f19356f40e6ff33c7ca683e8ba66d8 assets/dndmod/models/item/magmatite_leggings_amethyst_trim.json
 8d023658695dc7fd1ab44f4e7d92b6f4023a4b91 assets/dndmod/models/item/magmatite_leggings_copper_trim.json
@@ -51,5 +51,5 @@ a15f6c00a89a5d26445729afcd0d2e7c250660b8 assets/dndmod/models/item/orc_tooth.jso
 2f4472f3a3d9802dc796c805894fc66c4d6aba7a assets/dndmod/models/item/orc_tooth_pickaxe.json
 dc322879c35fb54b1c104ab8e7e64324041db28a assets/dndmod/models/item/orc_tooth_shovel.json
 df2a5fd5a17e0c54bf7a464386030452630a41fc assets/dndmod/models/item/orc_tooth_sword.json
-5115eaf0b5be87c45703ab2fb3283228ce3df80f assets/dndmod/models/item/raw_magmatite.json
 754b57c7dd5ff140246f848294f5a8ca5bc7caf3 assets/dndmod/models/item/raw_magnesium.json
+e2f92a985acb50be62f9156670a403b9687d262e assets/dndmod/models/item/uncured_magmatite.json

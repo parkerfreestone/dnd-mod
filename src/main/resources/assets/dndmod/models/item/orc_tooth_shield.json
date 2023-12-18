@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "dndmod:item/orc_tooth_shield_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "dndmod:item/orc_tooth_shield_2d"
+    },
+    "ground": {
+      "parent": "dndmod:item/orc_tooth_shield_2d"
+    },
+    "fixed": {
+      "parent": "dndmod:item/orc_tooth_shield_2d"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "T": {
+      "item": "dndmod:orc_tooth"
+    }
+  },
+  "pattern": [
+    "TIT",
+    "TLT",
+    " T "
+  ],
+  "result": {
+    "item": "dndmod:orc_tooth_shield"
+  },
+  "show_notification": true
+}

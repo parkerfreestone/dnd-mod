@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dndmod:cured_magmatite_from_smelting_uncured_magmatite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uncured_magmatite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dndmod:uncured_magmatite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_uncured_magmatite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dndmod:cured_magmatite_from_smelting_uncured_magmatite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

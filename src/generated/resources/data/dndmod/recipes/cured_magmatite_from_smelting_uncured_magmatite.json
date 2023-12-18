@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "magmatite",
+  "ingredient": {
+    "item": "dndmod:uncured_magmatite"
+  },
+  "result": "dndmod:cured_magmatite"
+}
