@@ -46,6 +46,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.ORC_TOOTH);
 
+        simpleItem(ModItems.BOMB);
+
         handheldItem(ModItems.ORC_TOOTH_SWORD);
         handheldItem(ModItems.ORC_TOOTH_PICKAXE);
         handheldItem(ModItems.ORC_TOOTH_AXE);
@@ -56,6 +58,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MAGMATITE_CHESTPLATE);
         trimmedArmorItem(ModItems.MAGMATITE_LEGGINGS);
         trimmedArmorItem(ModItems.MAGMATITE_BOOTS);
+
+        withExistingParent(ModItems.ORC_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     // Shoutout to El_Redstoniano for making this

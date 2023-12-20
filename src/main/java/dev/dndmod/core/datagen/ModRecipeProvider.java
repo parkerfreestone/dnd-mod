@@ -134,6 +134,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('M', ModItems.UNCURED_MAGMATITE.get())
                 .unlockedBy(getHasName(ModItems.UNCURED_MAGMATITE.get()), has(ModItems.UNCURED_MAGMATITE.get()))
                 .save(consumer);
+
+        // BOMB
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BOMB.get())
+                .pattern(" S ")
+                .pattern("IMI")
+                .pattern("GMG")
+                .define('M', ModItems.MAGNESIUM_INGOT.get())
+                .define('I', Items.IRON_INGOT)
+                .define('S', Items.STRING)
+                .define('G', Items.GUNPOWDER)
+                .unlockedBy(getHasName(ModItems.MAGNESIUM_INGOT.get()), has(ModItems.MAGNESIUM_INGOT.get()))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

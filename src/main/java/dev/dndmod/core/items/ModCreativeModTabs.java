@@ -26,6 +26,10 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.UNCURED_MAGMATITE.get());
                         output.accept(ModItems.CURED_MAGMATITE.get());
 
+                        output.accept(ModItems.ORC_SPAWN_EGG.get());
+
+                        output.accept(ModItems.BOMB.get());
+
                         output.accept(ModItems.ORC_TOOTH_SWORD.get());
                         output.accept(ModItems.ORC_TOOTH_PICKAXE.get());
                         output.accept(ModItems.ORC_TOOTH_AXE.get());

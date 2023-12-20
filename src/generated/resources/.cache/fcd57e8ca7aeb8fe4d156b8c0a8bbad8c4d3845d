@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-18T05:15:11.8810034	Item Models: dndmod
+// 1.20.1	2023-12-18T22:02:07.9947462	Item Models: dndmod
 a3ed8c7045b4d7e6a1154da23a487bde3db41a0d assets/dndmod/models/item/cured_magmatite.json
 19e2a89a8bb4700a67b7fc8e01661558ec7c7498 assets/dndmod/models/item/magmatite_boots.json
 5e832a032a7ecdd4c8a439933dae90049aca5d37 assets/dndmod/models/item/magmatite_boots_amethyst_trim.json
@@ -45,6 +45,7 @@ a2e22538f4010c65d03debe125f411e7577523ba assets/dndmod/models/item/magmatite_leg
 564f607bd570f402ddc14e8e8f26fe630c6fa6fb assets/dndmod/models/item/magmatite_leggings_quartz_trim.json
 07c03df38b9333580debfb7fe2947ad62742e831 assets/dndmod/models/item/magmatite_leggings_redstone_trim.json
 7022c8e921d319a6d6d01192ca26dfa220699b75 assets/dndmod/models/item/magnesium_ingot.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/dndmod/models/item/orc_spawn_egg.json
 a15f6c00a89a5d26445729afcd0d2e7c250660b8 assets/dndmod/models/item/orc_tooth.json
 13a31f35e1b70c48ee639ef922b0ff8ebf1e0bb8 assets/dndmod/models/item/orc_tooth_axe.json
 86de6d67bc1105b8144faee6a2ce0c0e688f581f assets/dndmod/models/item/orc_tooth_hoe.json

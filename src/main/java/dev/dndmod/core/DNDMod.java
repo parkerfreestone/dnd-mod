@@ -2,8 +2,13 @@ package dev.dndmod.core;
 
 import com.mojang.logging.LogUtils;
 import dev.dndmod.core.blocks.ModBlocks;
+import dev.dndmod.core.entity.ModEntities;
+import dev.dndmod.core.entity.client.BombProjectileRenderer;
+import dev.dndmod.core.entity.client.OrcRenderer;
 import dev.dndmod.core.items.ModCreativeModTabs;
 import dev.dndmod.core.items.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +41,8 @@ public class DNDMod
 
         ModBlocks.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -59,6 +66,10 @@ public class DNDMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) { }
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.ORC.get(), OrcRenderer::new);
+
+            EntityRenderers.register(ModEntities.BOMB_PROJECTILE.get(), BombProjectileRenderer::new);
+        }
     }
 }

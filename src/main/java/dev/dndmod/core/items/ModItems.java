@@ -1,7 +1,10 @@
 package dev.dndmod.core.items;
 
 import dev.dndmod.core.DNDMod;
+import dev.dndmod.core.entity.ModEntities;
+import dev.dndmod.core.items.custom.BombItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,7 +31,7 @@ public class ModItems {
 
     // ORC TOOTH TOOLS
     public static final RegistryObject<Item> ORC_TOOTH_SWORD = ITEMS.register("orc_tooth_sword",
-            () -> new SwordItem(ModToolTiers.ORC_TOOTH, 4, 2, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.ORC_TOOTH, 1, 1, new Item.Properties()));
     public static final RegistryObject<Item> ORC_TOOTH_PICKAXE = ITEMS.register("orc_tooth_pickaxe",
             () -> new PickaxeItem(ModToolTiers.ORC_TOOTH, 1, 1, new Item.Properties()));
     public static final RegistryObject<Item> ORC_TOOTH_AXE = ITEMS.register("orc_tooth_axe",
@@ -49,6 +52,15 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.MAGMATITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> MAGMATITE_BOOTS = ITEMS.register("magmatite_boots",
             () -> new ArmorItem(ModArmorMaterials.MAGMATITE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    // SPAWN EGGS
+    public static final RegistryObject<Item> ORC_SPAWN_EGG = ITEMS.register("orc_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.ORC, 0xD7E36, 0x1D0D00,
+                    new Item.Properties()));
+
+    // PROJECTILES
+    public static final RegistryObject<Item> BOMB = ITEMS.register("bomb",
+            () -> new BombItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

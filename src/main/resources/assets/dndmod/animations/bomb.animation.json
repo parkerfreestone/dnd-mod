@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.prime": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"string": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"5.0": {
+							"vector": [0, -1.75, 0],
+							"easing": "linear"
+						}
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "bomb",
+					"locator": "fuse"
+				}
+			}
+		}
+	}
+}
