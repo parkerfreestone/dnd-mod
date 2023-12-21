@@ -1,4 +1,5 @@
-// 1.20.1	2023-12-18T05:28:57.2622917	Recipes
+// 1.20.1	2023-12-20T15:28:22.2167293	Recipes
+6c26264f9e661a674770638c4b7a902a3305ad6c data/dndmod/advancements/recipes/misc/bomb.json
 484397357989366fb0db904a6b256474029f9621 data/dndmod/advancements/recipes/misc/cured_magmatite_from_blasting_magmatite_ore.json
 091a6ed94666334afcb6ca8356abc1044203226f data/dndmod/advancements/recipes/misc/cured_magmatite_from_blasting_uncured_magmatite.json
 11bdfd69191720f4ad5955f0de8b72e7acda5e03 data/dndmod/advancements/recipes/misc/cured_magmatite_from_smelting_magmatite_ore.json
@@ -17,6 +18,7 @@ a13d3fc789c4ecf83775727518b0f2c32acedea9 data/dndmod/advancements/recipes/misc/o
 ff9691ff1328d70b77b59b5856edd51b82fc8dd0 data/dndmod/advancements/recipes/misc/orc_tooth_shield.json
 7c650c226edc715e2fddb74761b9969a71c4dd0a data/dndmod/advancements/recipes/misc/orc_tooth_shovel.json
 b8dfa9f7a6ccf7973b1352a660d98edb70af19aa data/dndmod/advancements/recipes/misc/orc_tooth_sword.json
+509e46a0922f38737fa1cdf3651295131acc3298 data/dndmod/recipes/bomb.json
 5c244f3fdd22f1daf3fc636d6a413c3611f316b1 data/dndmod/recipes/cured_magmatite_from_blasting_magmatite_ore.json
 d996ae9775590faadd4d9449ccdea232e4a1805b data/dndmod/recipes/cured_magmatite_from_blasting_uncured_magmatite.json
 28a716425e19c1673bd0c295a88f01a835fec4a0 data/dndmod/recipes/cured_magmatite_from_smelting_magmatite_ore.json

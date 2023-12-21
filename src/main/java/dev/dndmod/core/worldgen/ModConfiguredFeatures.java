@@ -29,7 +29,7 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldMagnesiumOres = List.of(OreConfiguration.target(stoneReplaceable,
                 ModBlocks.MAGNESIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_MAGNESIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMagnesiumOres, 18));
+        register(context, OVERWORLD_MAGNESIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMagnesiumOres, 5));
         register(context, NETHER_MAGMATITE_ORE_KEY, Feature.ORE, new OreConfiguration(magmaBlockReplacables,
                 ModBlocks.MAGMATITE_ORE.get().defaultBlockState(), 45));
     }

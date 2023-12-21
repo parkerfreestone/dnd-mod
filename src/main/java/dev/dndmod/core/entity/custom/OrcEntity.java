@@ -1,5 +1,9 @@
 package dev.dndmod.core.entity.custom;
 
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializer;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,12 +24,16 @@ import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class OrcEntity extends Monster implements GeoEntity {
+    private static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(OrcEntity.class, EntityDataSerializers.BOOLEAN);
     protected final RawAnimation WALK_ANIMATION = RawAnimation.begin().thenLoop("animation.orc.walk");
     private AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     public OrcEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
+
+    public int attackAnimationTimeout = 0;
 
     public static AttributeSupplier setAttributes() {
         return Monster.createLivingAttributes()
@@ -35,6 +43,20 @@ public class OrcEntity extends Monster implements GeoEntity {
                 .add(Attributes.ATTACK_KNOCKBACK, 1f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.3f)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D).build();
+    }
+
+    private void setAttacking(boolean attacking) {
+        this.entityData.set(ATTACKING, attacking);
+    }
+
+    private void isAttacking() {
+        this.entityData.get(ATTACKING);
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(ATTACKING, false);
     }
 
     @Override
@@ -62,6 +84,13 @@ public class OrcEntity extends Monster implements GeoEntity {
         if (orcEntityAnimationState.isMoving()) {
            return orcEntityAnimationState.setAndContinue(WALK_ANIMATION);
         }
+
+//        if (this.isAttacking() && attackAnimationTimeout <= 0) {
+//            attackAnimationTimeout = 80; // Animation time in ticks
+//            orcEntityAnimationState.setAndContinue()
+//        } else {
+//            --this.attackAnimationTimeout;
+//        }
 
         return PlayState.STOP;
     }

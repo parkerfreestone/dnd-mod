@@ -11,6 +11,7 @@ import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 
 public class BombItem extends Item {
     public BombItem(Properties pProperties) {
@@ -24,7 +25,9 @@ public class BombItem extends Item {
         if (!pLevel.isClientSide) {
             BombProjectileEntity bomb = new BombProjectileEntity(pLevel, pPlayer);
             bomb.setItem(itemStack);
-            bomb.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
+            bomb.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 0.5F, 1.0F);
+            bomb.setBoundingBox(new AABB(0.5, 0.5, 0.5, 0.5, 0.5, 0.5));
+
             pLevel.addFreshEntity(bomb);
         }
 

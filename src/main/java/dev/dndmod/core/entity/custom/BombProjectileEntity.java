@@ -2,20 +2,17 @@ package dev.dndmod.core.entity.custom;
 
 import dev.dndmod.core.entity.ModEntities;
 import dev.dndmod.core.items.ModItems;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -31,17 +28,45 @@ public class BombProjectileEntity extends ThrowableItemProjectile implements Geo
     private AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     private final float EXPLOSION_POWER = 2.5F;
+    private final int FUSE_DURRATION_TICKS = 5 * 20;
+
+    private int currentFuseTime = FUSE_DURRATION_TICKS;
+    private int particleTickCounter = 0;
 
     public BombProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.setBoundingBox(new AABB(0.5, 0.5, 0.5, 0.5, 0.5, 0.5));
     }
 
     public BombProjectileEntity(Level pLevel) {
         super(ModEntities.BOMB_PROJECTILE.get(), pLevel);
+        this.setBoundingBox(new AABB(0.5, 0.5, 0.5, 0.5, 0.5, 0.5));
     }
 
     public BombProjectileEntity(Level pLevel, LivingEntity livingEntity) {
         super(ModEntities.BOMB_PROJECTILE.get(), livingEntity, pLevel);
+        this.setBoundingBox(new AABB(0.5, 0.5, 0.5, 0.5, 0.5, 0.5));
+    }
+
+    @Override
+    public void tick() {
+        if (!this.level().isClientSide()) {
+            if (currentFuseTime-- <= 0) {
+                this.explode();
+            }
+        }
+
+        if (this.level().isClientSide()) {
+            if (!this.isRemoved()) {
+                if (++particleTickCounter >= 5) {
+                 particleTickCounter = 0;
+
+                 this.level().addParticle(ParticleTypes.FLAME, this.getX(), this.getY() + this.getBbHeight() / 3.0, this.getZ(), 0.0, 0.04, 0.0);
+                }
+            }
+        }
+
+        super.tick();
     }
 
     @Override
@@ -51,19 +76,13 @@ public class BombProjectileEntity extends ThrowableItemProjectile implements Geo
 
     @Override
     protected void onHitEntity(EntityHitResult pResult) {
-        if (!this.level().isClientSide()) {
-            this.explode();
-        }
-
+        this.setDeltaMovement(0, 0, 0);
         super.onHitEntity(pResult);
     }
 
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
-        if (!this.level().isClientSide()) {
-            this.explode();
-        }
-
+        this.setDeltaMovement(0, 0, 0);
         super.onHitBlock(pResult);
     }
 
