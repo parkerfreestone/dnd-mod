@@ -1,7 +1,7 @@
 package dev.dndmod.core.entity.custom;
 
+import dev.dndmod.core.entity.ai.OrcAttackGoal;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializer;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
@@ -11,7 +11,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
@@ -27,30 +29,32 @@ public class OrcEntity extends Monster implements GeoEntity {
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(OrcEntity.class, EntityDataSerializers.BOOLEAN);
     protected final RawAnimation WALK_ANIMATION = RawAnimation.begin().thenLoop("animation.orc.walk");
+    protected final RawAnimation ATTACK_ANIMATION = RawAnimation.begin().thenLoop("animation.orc.attack");
+
     private AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+    public int attackAnimationTimeout = 20;
 
     public OrcEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    public int attackAnimationTimeout = 0;
-
     public static AttributeSupplier setAttributes() {
         return Monster.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 42D)
                 .add(Attributes.ATTACK_DAMAGE, 6f)
-                .add(Attributes.FOLLOW_RANGE, 8D)
+                .add(Attributes.FOLLOW_RANGE, 35D)
                 .add(Attributes.ATTACK_KNOCKBACK, 1f)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.3f)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D).build();
     }
 
-    private void setAttacking(boolean attacking) {
+    public void setAttacking(boolean attacking) {
         this.entityData.set(ATTACKING, attacking);
     }
 
-    private void isAttacking() {
-        this.entityData.get(ATTACKING);
+    public boolean isAttacking() {
+        return this.entityData.get(ATTACKING);
     }
 
     @Override
@@ -61,36 +65,49 @@ public class OrcEntity extends Monster implements GeoEntity {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(2, new FloatGoal(this));
+        this.goalSelector.addGoal(0, new FloatGoal(this));
 
-        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0, false));
-        this.goalSelector.addGoal(5, new MoveTowardsTargetGoal(this, 0.9, 32.0F));
+        this.goalSelector.addGoal(1, new OrcAttackGoal(this, 1.0D, true));
 
-        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.1D));
-        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
 
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, IronGolem.class, false));
 
+        this.goalSelector.addGoal(3, new MoveTowardsTargetGoal(this, 0.9, 32.0F));
+
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.1D));
+        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
+
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this, "controller", 2, this::predicate));
+        controllerRegistrar.add(new AnimationController<>(this, "attackController", 2, this::attackPredicate));
+    }
+
+    private PlayState attackPredicate(AnimationState<OrcEntity> orcEntityAnimationState) {
+       if (this.isAttacking() && attackAnimationTimeout <= 0) {
+           attackAnimationTimeout = 20;
+           return orcEntityAnimationState.setAndContinue(ATTACK_ANIMATION);
+       } else {
+           --this.attackAnimationTimeout;
+       }
+
+        if (!this.isAttacking()) {
+            return PlayState.STOP;
+        }
+
+        return PlayState.CONTINUE;
     }
 
     private <E extends OrcEntity> PlayState predicate(final AnimationState<E> orcEntityAnimationState) {
         if (orcEntityAnimationState.isMoving()) {
-           return orcEntityAnimationState.setAndContinue(WALK_ANIMATION);
+            return orcEntityAnimationState.setAndContinue(WALK_ANIMATION);
         }
-
-//        if (this.isAttacking() && attackAnimationTimeout <= 0) {
-//            attackAnimationTimeout = 80; // Animation time in ticks
-//            orcEntityAnimationState.setAndContinue()
-//        } else {
-//            --this.attackAnimationTimeout;
-//        }
 
         return PlayState.STOP;
     }
