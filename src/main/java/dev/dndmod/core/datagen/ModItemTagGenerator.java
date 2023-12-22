@@ -2,6 +2,7 @@ package dev.dndmod.core.datagen;
 
 import dev.dndmod.core.DNDMod;
 import dev.dndmod.core.items.ModItems;
+import dev.dndmod.core.utils.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -25,5 +26,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.MAGMATITE_CHESTPLATE.get(),
                         ModItems.MAGMATITE_LEGGINGS.get(),
                         ModItems.MAGMATITE_BOOTS.get());
+
+        this.tag(ModTags.Items.IS_PLAYER_ACCESSORY)
+                .add(ModItems.UNCURED_MAGMATITE.get());
+
+//        this.tag(ModTags.Items.)
     }
 }

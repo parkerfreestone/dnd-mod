@@ -7,8 +7,10 @@ import dev.dndmod.core.entity.client.BombProjectileRenderer;
 import dev.dndmod.core.entity.client.OrcRenderer;
 import dev.dndmod.core.items.ModCreativeModTabs;
 import dev.dndmod.core.items.ModItems;
+import dev.dndmod.core.screen.ModInventoryScreen;
+import dev.dndmod.core.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -43,6 +45,8 @@ public class DNDMod
 
         ModEntities.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -70,6 +74,8 @@ public class DNDMod
             EntityRenderers.register(ModEntities.ORC.get(), OrcRenderer::new);
 
             EntityRenderers.register(ModEntities.BOMB_PROJECTILE.get(), BombProjectileRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.MOD_INVENTORY_MENU.get(), ModInventoryScreen::new);
         }
     }
 }

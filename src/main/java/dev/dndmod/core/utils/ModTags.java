@@ -18,6 +18,9 @@ public class ModTags {
     }
 
     public static class Items {
+        public static TagKey<Item> IS_PLAYER_ACCESSORY = tag("is_player_accessory");
+        public static TagKey<Item> IS_BACKPACK_ITEM = tag("is_backpack_item");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(DNDMod.MOD_ID, name));
         }

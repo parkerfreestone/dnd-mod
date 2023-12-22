@@ -27,5 +27,8 @@
 
   "block.dndmod.geo_refiner": "Geo-Refiner",
 
-  "creativetab.dndmod": "DND Mod"
+  "creativetab.dndmod": "DND Mod",
+
+  "key.category.dndmod": "DND Mod",
+  "key.dndmod.custom_inventory": "Open/Close DND Inventory"
 }
