@@ -25,6 +25,12 @@
   "block.dndmod.magnesium_ore": "Magnesium Ore",
   "block.dndmod.magmatite_ore": "Magmatite Ore",
 
+  "block.dndmod.void_grass": "V'rass",
+  "block.dndmod.void_dirt": "V'oil",
+  "block.dndmod.void_rock": "Void Rock",
+  "block.dndmod.void_cobbled_rock": "Cobbled Void Rock",
+
+
   "block.dndmod.geo_refiner": "Geo-Refiner",
 
   "creativetab.dndmod": "DND Mod",

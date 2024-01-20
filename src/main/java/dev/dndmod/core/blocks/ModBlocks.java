@@ -2,6 +2,7 @@ package dev.dndmod.core.blocks;
 
 import dev.dndmod.core.DNDMod;
 import dev.dndmod.core.blocks.custom.GeoRefinerBlock;
+import dev.dndmod.core.blocks.custom.ModVoidPortalBlock;
 import dev.dndmod.core.items.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -9,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,6 +30,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEO_REFINER = registerBlock("geo_refiner",
             ()-> new GeoRefinerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+// +---------------+
+// |  VOID BLOCKS  |
+// +---------------+
+    public static final RegistryObject<Block> VOID_GRASS = registerBlock("void_grass",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
+    public static final RegistryObject<Block> VOID_DIRT = registerBlock("void_dirt",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+    public static final RegistryObject<Block> VOID_ROCK = registerBlock("void_rock",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> VOID_COBBLED_ROCK = registerBlock("void_cobbled_rock",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)));
+    public static final RegistryObject<Block> VOID_PORTAL_BLOCK = registerBlock("void_portal_block",
+            ()-> new ModVoidPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noLootTable().noOcclusion().noCollission()));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

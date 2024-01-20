@@ -33,7 +33,7 @@ public class OrcEntity extends Monster implements GeoEntity {
 
     private AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public int attackAnimationTimeout = 20;
+    public int attackAnimationTimeout = 15;
 
     public OrcEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);

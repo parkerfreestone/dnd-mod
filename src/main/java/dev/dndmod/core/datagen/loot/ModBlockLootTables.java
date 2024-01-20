@@ -24,7 +24,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
 //        THIS IS FOR NORMAL BLOCKS
-//        this.dropSelf(ModBlocks.BLOCK_HERE.get());
+//        thanks
+
+        this.dropSelf(ModBlocks.VOID_GRASS.get());
+        this.dropSelf(ModBlocks.VOID_DIRT.get());
+        this.dropSelf(ModBlocks.VOID_ROCK.get());
+        this.dropSelf(ModBlocks.VOID_COBBLED_ROCK.get());
 
         this.add(ModBlocks.MAGNESIUM_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.MAGNESIUM_ORE.get(), ModItems.RAW_MAGNESIUM.get(), 1.0f, 4.0f));

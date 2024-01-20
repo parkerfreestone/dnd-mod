@@ -6,6 +6,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
+
+// THIS CLASS IS BEING PUT ON HOLD UNTIL VERSION 0.4.0
 public class GeoRefinerBlock extends BaseEntityBlock {
 
     public GeoRefinerBlock(Properties pProperties) {

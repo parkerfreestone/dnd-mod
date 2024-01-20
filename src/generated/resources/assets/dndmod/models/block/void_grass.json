@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "dndmod:block/void_dirt",
+    "east": "dndmod:block/void_grass",
+    "north": "dndmod:block/void_grass",
+    "particle": "dndmod:block/void_grass",
+    "south": "dndmod:block/void_grass",
+    "up": "dndmod:block/void_grass_top",
+    "west": "dndmod:block/void_grass"
+  }
+}

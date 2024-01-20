@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dndmod:block/void_cobbled_rock"
+    }
+  }
+}

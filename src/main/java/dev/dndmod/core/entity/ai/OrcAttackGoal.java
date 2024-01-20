@@ -8,7 +8,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 
 public class OrcAttackGoal extends MeleeAttackGoal {
     private final OrcEntity entity;
-    private int attackDelay = 10;
+    private int attackDelay = 5;
     private int ticksUntilNextAttack = 10;
     private boolean shouldCountTillNextAttack = false;
 
@@ -20,7 +20,7 @@ public class OrcAttackGoal extends MeleeAttackGoal {
     @Override
     public void start() {
         super.start();
-        attackDelay = 10;
+        attackDelay = 5;
         ticksUntilNextAttack = 10;
     }
 
@@ -64,7 +64,6 @@ public class OrcAttackGoal extends MeleeAttackGoal {
     protected int getTicksUntilNextAttack() {
         return this.ticksUntilNextAttack;
     }
-
 
     protected void performAttack(LivingEntity pEnemy) {
         this.resetAttackCooldown();

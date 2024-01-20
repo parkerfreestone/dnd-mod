@@ -1,4 +1,8 @@
-// 1.20.1	2023-12-18T22:02:07.9937489	Loot Tables
+// 1.20.1	2024-01-20T06:59:08.14076	Loot Tables
 46bf03919a5389748b99d475dd3ec24917e74630 data/dndmod/loot_tables/blocks/geo_refiner.json
 e7a5e3cb6fdd1faa9b3b2f60108b12bd5d82c6a5 data/dndmod/loot_tables/blocks/magmatite_ore.json
 ec803aa53bd1651d7b1e726357d5fb17fcc3e26b data/dndmod/loot_tables/blocks/magnesium_ore.json
+87c8f0d4f852ba517f387918da1c88d7f333622c data/dndmod/loot_tables/blocks/void_cobbled_rock.json
+31fb7567c91f358157b4e1a3ad74e2948e08dac5 data/dndmod/loot_tables/blocks/void_dirt.json
+777c3d86c3d3176a532fee0c19ad1d82a52eb162 data/dndmod/loot_tables/blocks/void_grass.json
+e61b5ae66cdb2572b4204a72f216475f7d297168 data/dndmod/loot_tables/blocks/void_rock.json
