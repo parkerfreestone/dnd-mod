@@ -1,4 +1,5 @@
-// 1.20.1	2023-12-18T22:02:07.9937489	Loot Tables
+// 1.20.1	2024-01-20T02:01:57.6510307	Loot Tables
 46bf03919a5389748b99d475dd3ec24917e74630 data/dndmod/loot_tables/blocks/geo_refiner.json
 e7a5e3cb6fdd1faa9b3b2f60108b12bd5d82c6a5 data/dndmod/loot_tables/blocks/magmatite_ore.json
 ec803aa53bd1651d7b1e726357d5fb17fcc3e26b data/dndmod/loot_tables/blocks/magnesium_ore.json
+1692085f3f209c486cca89e7392a2dd9d768d467 data/dndmod/loot_tables/blocks/thatch.json

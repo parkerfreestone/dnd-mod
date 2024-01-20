@@ -45,6 +45,8 @@ public class ModCreativeModTabs {
 
                         output.accept(ModBlocks.MAGNESIUM_ORE.get());
                         output.accept(ModBlocks.MAGMATITE_ORE.get());
+                        output.accept(ModBlocks.THATCH.get());
+
                     })
                     .build());
 

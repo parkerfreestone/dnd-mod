@@ -16,8 +16,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+//        ORES
         blockWithItem(ModBlocks.MAGNESIUM_ORE);
         blockWithItem(ModBlocks.MAGMATITE_ORE);
+
+//        DECORATION_BLOCKS
+        blockWithItem(ModBlocks.THATCH);
 
         blockWithItem(ModBlocks.GEO_REFINER);
 //        simpleBlock(ModBlocks.GEO_REFINER.get(),
