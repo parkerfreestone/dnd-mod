@@ -38,6 +38,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createCopperLikeOreDrops(ModBlocks.MAGMATITE_ORE.get(), ModItems.UNCURED_MAGMATITE.get(), 1.0f, 3.0f));
 
         this.dropSelf(ModBlocks.GEO_REFINER.get());
+
+//        DECORATION_BLOCKS
+        this.dropSelf(ModBlocks.THATCH.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item, float dropsFrom, float dropsTo) {

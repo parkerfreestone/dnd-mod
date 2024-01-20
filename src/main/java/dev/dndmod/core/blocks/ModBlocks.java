@@ -32,9 +32,7 @@ public class ModBlocks {
             ()-> new GeoRefinerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
-// +---------------+
-// |  VOID BLOCKS  |
-// +---------------+
+//    VOID BLOCKS
     public static final RegistryObject<Block> VOID_GRASS = registerBlock("void_grass",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
     public static final RegistryObject<Block> VOID_DIRT = registerBlock("void_dirt",
@@ -47,6 +45,9 @@ public class ModBlocks {
             ()-> new ModVoidPortalBlock(BlockBehaviour.Properties.copy(Blocks.END_PORTAL).noLootTable().noOcclusion().noCollission()));
 
 
+//    DECORATION_BLOCKS
+    public static final RegistryObject<Block> THATCH = registerBlock("thatch",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
