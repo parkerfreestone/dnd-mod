@@ -16,8 +16,10 @@ import dev.dndmod.core.worldgen.biome.ModTerrablender;
 import dev.dndmod.core.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.data.worldgen.biome.OverworldBiomes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -57,6 +59,8 @@ public class DNDMod
 
         ModMenuTypes.register(modEventBus);
 
+//        ModTerrablender.registerBiomes();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -67,13 +71,9 @@ public class DNDMod
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-//            ModTerrablender.registerBiomes();
-
-//            Regions.register(new ModOverworldRegion(new ResourceLocation(MOD_ID, "overworld"), 20));
+            ModEntityDropHandler.setupDropConfigs();
 
 //            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
-
-            ModEntityDropHandler.setupDropConfigs();
         });
     }
 
