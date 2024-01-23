@@ -1,9 +1,6 @@
-// 1.20.1	2024-01-20T17:37:44.3180315	Registries
-9e1f4d9d673b066cfc461cd1567ee2337fb7b866 data/dndmod/dimension/void_dim.json
-f66c0a0a3652c16b5dfbc3fde7dfbc4bf0d14289 data/dndmod/dimension_type/void_dim_type.json
+// 1.20.1	2024-01-22T02:51:11.7621929	Registries
 90de344bf4fcf61ea5180c36c75041c9ff4e5ded data/dndmod/forge/biome_modifier/add_magmatite_ore.json
 d47bfcc4cecef53888d8bbd273996bfc1e455c52 data/dndmod/forge/biome_modifier/add_magnesium_ore.json
-d377205be53518e37c5a9b40e5de93699cd8e566 data/dndmod/worldgen/biome/void_surface_biome.json
 5b39759255a831989dbc454f81d48e2cd2baf3f5 data/dndmod/worldgen/configured_feature/magnesium_ore.json
 16b53306f43299c58c537c72de0863c7d96645a1 data/dndmod/worldgen/configured_feature/nether_magmatite_ore.json
 e646114e573f213b652f76ed993d95fa8d8654e7 data/dndmod/worldgen/placed_feature/magnesium_ore_placed.json

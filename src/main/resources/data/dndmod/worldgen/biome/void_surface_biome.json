@@ -4,10 +4,10 @@
   "has_precipitation": false,
   "temperature_modifier": "none",
   "effects": {
-    "sky_color": 918565,
-    "fog_color": 1054032,
-    "water_color": 918565,
-    "water_fog_color": 1314372,
+    "sky_color": 526310,
+    "fog_color": 660754,
+    "water_color": 1637180,
+    "water_fog_color": 2768971,
     "grass_color": 918565
   },
   "spawners": {},
@@ -18,5 +18,19 @@
       "minecraft:canyon"
     ]
   },
-  "features": []
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "dndmod:void_tendril_patch"
+    ],
+    []
+  ]
 }

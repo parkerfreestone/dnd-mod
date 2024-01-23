@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "dndmod:block/void_portal_frame",
+    "east": "dndmod:block/void_portal_frame_side",
+    "north": "dndmod:block/void_portal_frame_front",
+    "particle": "dndmod:block/void_portal_frame_side",
+    "south": "dndmod:block/void_portal_frame_side",
+    "up": "dndmod:block/void_portal_frame",
+    "west": "dndmod:block/void_portal_frame_side"
+  }
+}

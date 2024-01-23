@@ -1,39 +1,36 @@
-[21Jan2024 00:24:54.069] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pnfre\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, dndmod, --all, --output, C:\Users\pnfre\Dev\dnd-mod\src\generated\resources, --existing, C:\Users\pnfre\Dev\dnd-mod\src\main\resources]
-[21Jan2024 00:24:54.097] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[21Jan2024 00:24:54.374] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[21Jan2024 00:24:54.459] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pnfre/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[21Jan2024 00:24:54.948] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21Jan2024 00:24:54.951] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21Jan2024 00:24:54.954] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21Jan2024 00:24:54.956] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
-[21Jan2024 00:24:55.141] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[21Jan2024 00:24:57.280] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[21Jan2024 00:24:57.285] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pnfre\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, dndmod, --all, --output, C:\Users\pnfre\Dev\dnd-mod\src\generated\resources, --existing, C:\Users\pnfre\Dev\dnd-mod\src\main\resources]
-[21Jan2024 00:24:57.663] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
-[21Jan2024 00:24:57.665] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
-[21Jan2024 00:24:57.667] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
-[21Jan2024 00:24:58.441] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [dndmod]
-[21Jan2024 00:25:03.756] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
-[21Jan2024 00:25:03.763] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
-[21Jan2024 00:25:03.792] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
-[21Jan2024 00:25:03.792] [modloading-worker-0/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
-[21Jan2024 00:25:03.792] [modloading-worker-0/INFO] [terrablender/]: Registered region dndmod:overworld to index 1 for type NETHER
-[21Jan2024 00:25:03.858] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[21Jan2024 00:25:04.622] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pnfre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[21Jan2024 00:25:04.624] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pnfre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[21Jan2024 00:25:04.990] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[21Jan2024 00:25:05.085] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 93 ms
-[21Jan2024 00:25:05.085] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[21Jan2024 00:25:05.151] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 66 ms
-[21Jan2024 00:25:05.152] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: dndmod
-[21Jan2024 00:25:05.266] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: dndmod finished after 113 ms
-[21Jan2024 00:25:05.266] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: dndmod
-[21Jan2024 00:25:05.302] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: dndmod finished after 35 ms
-[21Jan2024 00:25:05.302] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[21Jan2024 00:25:05.321] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 18 ms
-[21Jan2024 00:25:05.321] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id dndmod
-[21Jan2024 00:25:05.328] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id dndmod finished after 7 ms
-[21Jan2024 00:25:05.328] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id dndmod
-[21Jan2024 00:25:05.330] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id dndmod finished after 1 ms
-[21Jan2024 00:25:05.330] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 342 ms
-[21Jan2024 00:25:05.341] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 143, old count: 143, new count: 144, removed stale: 0, written: 0
+[22Jan2024 22:57:54.086] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\pnfre\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, dndmod, --all, --output, C:\Users\pnfre\Dev\dnd-mod\src\generated\resources, --existing, C:\Users\pnfre\Dev\dnd-mod\src\main\resources]
+[22Jan2024 22:57:54.098] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[22Jan2024 22:57:54.327] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[22Jan2024 22:57:54.438] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/pnfre/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[22Jan2024 22:57:54.895] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[22Jan2024 22:57:54.898] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[22Jan2024 22:57:54.901] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[22Jan2024 22:57:54.903] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\pnfre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
+[22Jan2024 22:57:55.084] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[22Jan2024 22:57:57.095] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[22Jan2024 22:57:57.101] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\pnfre\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, dndmod, --all, --output, C:\Users\pnfre\Dev\dnd-mod\src\generated\resources, --existing, C:\Users\pnfre\Dev\dnd-mod\src\main\resources]
+[22Jan2024 22:57:57.528] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
+[22Jan2024 22:57:57.530] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
+[22Jan2024 22:57:57.532] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\pnfre\Dev\dnd-mod\build\createSrgToMcp\output.srg
+[22Jan2024 22:57:58.399] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [dndmod]
+[22Jan2024 22:58:03.634] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
+[22Jan2024 22:58:03.642] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
+[22Jan2024 22:58:03.773] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[22Jan2024 22:58:04.639] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pnfre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[22Jan2024 22:58:04.641] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/pnfre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[22Jan2024 22:58:05.040] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[22Jan2024 22:58:05.127] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 86 ms
+[22Jan2024 22:58:05.128] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[22Jan2024 22:58:05.259] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 130 ms
+[22Jan2024 22:58:05.259] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: dndmod
+[22Jan2024 22:58:05.464] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: dndmod finished after 204 ms
+[22Jan2024 22:58:05.465] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: dndmod
+[22Jan2024 22:58:05.505] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: dndmod finished after 40 ms
+[22Jan2024 22:58:05.506] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[22Jan2024 22:58:05.526] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 20 ms
+[22Jan2024 22:58:05.527] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id dndmod
+[22Jan2024 22:58:05.542] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id dndmod finished after 14 ms
+[22Jan2024 22:58:05.542] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id dndmod
+[22Jan2024 22:58:05.544] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id dndmod finished after 1 ms
+[22Jan2024 22:58:05.544] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 504 ms
+[22Jan2024 22:58:05.554] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 153, old count: 154, new count: 154, removed stale: 0, written: 1

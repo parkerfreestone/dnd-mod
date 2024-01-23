@@ -1,6 +1,7 @@
 package dev.dndmod.core.datagen;
 
 import dev.dndmod.core.DNDMod;
+import dev.dndmod.core.blocks.ModBlocks;
 import dev.dndmod.core.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -58,6 +60,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MAGMATITE_CHESTPLATE);
         trimmedArmorItem(ModItems.MAGMATITE_LEGGINGS);
         trimmedArmorItem(ModItems.MAGMATITE_BOOTS);
+
+        simpleBlockItemBlockTexture(ModBlocks.VOID_TENDRIL);
 
         withExistingParent(ModItems.ORC_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
@@ -120,5 +124,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(DNDMod.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(DNDMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 }

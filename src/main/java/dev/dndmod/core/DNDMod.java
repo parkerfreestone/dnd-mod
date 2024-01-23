@@ -6,21 +6,13 @@ import dev.dndmod.core.entity.ModEntities;
 import dev.dndmod.core.entity.client.BombProjectileRenderer;
 import dev.dndmod.core.entity.client.OrcRenderer;
 import dev.dndmod.core.entity.events.ModEntityDropHandler;
-import dev.dndmod.core.items.ModCreativeModTabs;
+import dev.dndmod.core.items.ModCreativeModeTabs;
 import dev.dndmod.core.items.ModItems;
 import dev.dndmod.core.screen.ModInventoryScreen;
 import dev.dndmod.core.screen.ModMenuTypes;
-import dev.dndmod.core.worldgen.biome.ModBiomes;
-import dev.dndmod.core.worldgen.biome.ModOverworldRegion;
-import dev.dndmod.core.worldgen.biome.ModTerrablender;
-import dev.dndmod.core.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.data.worldgen.biome.OverworldBiomes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.biome.Biomes;
-import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,9 +26,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import terrablender.api.Region;
-import terrablender.api.Regions;
-import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DNDMod.MOD_ID)
@@ -49,7 +38,7 @@ public class DNDMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 

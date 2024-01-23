@@ -23,9 +23,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-//        THIS IS FOR NORMAL BLOCKS
-//        thanks
-
         this.dropSelf(ModBlocks.VOID_GRASS.get());
         this.dropSelf(ModBlocks.VOID_DIRT.get());
         this.dropSelf(ModBlocks.VOID_ROCK.get());
@@ -39,8 +36,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.GEO_REFINER.get());
 
-//        DECORATION_BLOCKS
+        this.dropSelf(ModBlocks.VOID_PORTAL_FRAME.get());
+
+        this.dropSelf(ModBlocks.SMOOTH_END_STONE_BRICKS.get());
+
+//        DECORATION BLOCKS
         this.dropSelf(ModBlocks.THATCH.get());
+
+//        FLOWERS
+        this.dropSelf(ModBlocks.VOID_TENDRIL.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item, float dropsFrom, float dropsTo) {

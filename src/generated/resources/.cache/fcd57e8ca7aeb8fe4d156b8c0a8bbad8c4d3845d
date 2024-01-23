@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-20T16:46:30.3947861	Item Models: dndmod
+// 1.20.1	2024-01-22T02:51:11.7631958	Item Models: dndmod
 99cbe5c65cd77382cb0e9a48fa88de677768d88c assets/dndmod/models/item/bomb.json
 a3ed8c7045b4d7e6a1154da23a487bde3db41a0d assets/dndmod/models/item/cured_magmatite.json
 19e2a89a8bb4700a67b7fc8e01661558ec7c7498 assets/dndmod/models/item/magmatite_boots.json
@@ -55,3 +55,4 @@ dc322879c35fb54b1c104ab8e7e64324041db28a assets/dndmod/models/item/orc_tooth_sho
 df2a5fd5a17e0c54bf7a464386030452630a41fc assets/dndmod/models/item/orc_tooth_sword.json
 754b57c7dd5ff140246f848294f5a8ca5bc7caf3 assets/dndmod/models/item/raw_magnesium.json
 e2f92a985acb50be62f9156670a403b9687d262e assets/dndmod/models/item/uncured_magmatite.json
+d54257f6c119a81f44dd8fb56cae5f9c7c5eeec9 assets/dndmod/models/item/void_tendril.json

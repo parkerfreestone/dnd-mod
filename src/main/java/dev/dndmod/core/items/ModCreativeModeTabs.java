@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModCreativeModTabs {
+public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DNDMod.MOD_ID);
 
@@ -46,6 +46,14 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.MAGNESIUM_ORE.get());
                         output.accept(ModBlocks.MAGMATITE_ORE.get());
                         output.accept(ModBlocks.THATCH.get());
+
+                        output.accept(ModBlocks.VOID_TENDRIL.get());
+                        output.accept(ModBlocks.VOID_GRASS.get());
+                        output.accept(ModBlocks.VOID_ROCK.get());
+                        output.accept(ModBlocks.VOID_DIRT.get());
+                        output.accept(ModBlocks.VOID_COBBLED_ROCK.get());
+                        output.accept(ModBlocks.VOID_PORTAL_BLOCK.get());
+                        output.accept(ModBlocks.VOID_PORTAL_FRAME.get());
 
                     })
                     .build());
